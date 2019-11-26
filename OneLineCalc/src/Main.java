@@ -4,8 +4,8 @@ public class Main {
 
     public static boolean isLoop = true;
     public static String temp = "";
-    public static Mainframe frame;
-    public static ListValues list;
+    private static Mainframe frame;
+    private static ListValues list;
 
     public static void main(String[] args){
         frame = new Mainframe();
@@ -15,13 +15,15 @@ public class Main {
         looper();
     }
 
-    public static void looper(){
+    private static void looper(){
         Scanner scanner = new Scanner(System.in);
         String line = scanner.nextLine();
-        calcuate(line);
+        if (lineChecker(line))
+            calcuate(line);
+        else looper(); //loops back again if the entry was incorrect.
     }
 
-    public static void calcuate(String line){
+    private static void calcuate(String line){
         if (!line.equalsIgnoreCase("exit")){
             framer(line); //turns the line into a mainframe
             System.out.println(frame.calculate()); //prints the result into a new line
@@ -30,7 +32,7 @@ public class Main {
         }
     }
 
-    public static void framer(String line){
+    private static void framer(String line){
         String runningNumber = ""; //used for concatenating values
         char[] tempArr = line.toCharArray();
         for (int i = 0; i < tempArr.length; i++){
@@ -45,10 +47,38 @@ public class Main {
                 frame.addFrame(Double.parseDouble(runningNumber), OP.NULL);
         }
 
-        public static void safeAddFrame(String runningNumber, char operator) throws NumberFormatException{
-        frame.addFrame(Double.parseDouble(runningNumber), list.convertToOP(operator));
+        public static void safeAddFrame(String runningNumber, OP operator ) throws NumberFormatException{
+        frame.addFrame(Double.parseDouble(runningNumber), operator);
 
         }
+
+        private static boolean lineChecker(String line) { //ensures that everything is syntatically correct before it is fed to the framer.
+            boolean lastIsLetter = false;
+            boolean lastIsNumber = false;
+            String runningString = "";
+            int dCounter = 0; //counter for dots
+            int pCounter = 0; //counter for parentheses
+            char[] tempArr = line.toCharArray();
+            for (int i = 0; i < tempArr.length; i++){
+                runningString += tempArr[i]; //adds a character to the runningString (it is read from left to right).
+
+                if (tempArr[i] == '(')
+                    pCounter++; //adds one to pcounter
+                if (tempArr[i] == ')')
+                    pCounter--; //removes one to pcounter
+                if (tempArr[i] == '.')
+                    dCounter++;
+
+                if (dCounter > 1){ //used to ensure that numbers are entered in correctly
+                    System.out.println("NUMBER FORMAT ERROR.");
+                    return false; //there are more than two .
+                }
+
+            }
+
+            return true;
+        }
+
     }
 
 

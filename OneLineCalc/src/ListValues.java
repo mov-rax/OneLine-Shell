@@ -1,33 +1,17 @@
 import java.util.HashMap;
-import java.util.Map;
 
 public class ListValues{
-    private HashMap<String, Boolean> numList;
-    private HashMap<String, Boolean> opList;
     private HashMap<String, OP> opListOP;
+    private String numList;
+    private String opList;
+    private String letterList;
 
     ListValues(){
-        numList = new HashMap<>();
-        opList = new HashMap<>();
         opListOP = new HashMap<>();
 
-        numList.put("0", true);
-        numList.put("1", true);
-        numList.put("2", true);
-        numList.put("3", true);
-        numList.put("4", true);
-        numList.put("5", true);
-        numList.put("6", true);
-        numList.put("7", true);
-        numList.put("8", true);
-        numList.put("9", true);
-        numList.put(".", true);
-
-        opList.put("*", true);
-        opList.put("/", true);
-        opList.put("%", true);
-        opList.put("-", true);
-        opList.put("+", true);
+        numList = "0123456789."; //allowed list of numbers
+        opList = "*/%+-"; //allowed list of operators
+        letterList = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_-"; //allowed list of characters for usage in labels
 
         opListOP.put("*", OP.MULTIPLY);
         opListOP.put("/", OP.DIVIDE);
@@ -38,13 +22,13 @@ public class ListValues{
     }
 
     public Boolean numListContains(char character){ //safely returns numlist bool
-        if (numList.get(character + "") != null)
+        if (numList.contains(character + ""))
             return true;
         return false;
     }
 
     public Boolean opListContains(char character){ //safely returns oplist bool
-        if (opList.get(character + "") != null)
+        if (opList.contains(character + ""))
             return true;
         return false;
     }
@@ -53,5 +37,11 @@ public class ListValues{
         if (opListOP.get(character + "") != null)
             return opListOP.get(character + "");
         return OP.NULL;
+    }
+
+    public Boolean letterListContains(char character){
+        if (letterList.contains(character + ""))
+            return true;
+        return false;
     }
 }
