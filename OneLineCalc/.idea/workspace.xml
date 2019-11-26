@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7638518f-566d-4621-9cb0-65787a22650c" name="Default Changelist" comment="Added a NUMBER FORMAT ERROR if a digit has more than one '.'.&#10;Added a list for labels.&#10;Removed unnecessary code.&#10;Simplified the lists for numbers and operators.">
+    <list default="true" id="7638518f-566d-4621-9cb0-65787a22650c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OneLineCalc/BigBrain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OneLineCalc/BigBrain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OneLineCalc/Commands.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OneLineCalc/Commands.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OneLineCalc/FormatError.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OneLineCalc/FormatError.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OneLineCalc/ListValues.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OneLineCalc/ListValues.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OneLineCalc/META-INF/OneLineCalc.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OneLineCalc/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OneLineCalc/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OneLineCalc/Mainframe$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OneLineCalc/Mainframe$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OneLineCalc/Mainframe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OneLineCalc/Mainframe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OneLineCalc/OP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OneLineCalc/OP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OneLineCalc/rax/Lables/LabelList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OneLineCalc/rax/Lables/LabelList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OneLineCalc/rax/Lables/LabelNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OneLineCalc/rax/Lables/LabelNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +105,7 @@
       <workItem from="1574536713712" duration="21354000" />
       <workItem from="1574740009321" duration="286000" />
       <workItem from="1574740323399" duration="4789000" />
-      <workItem from="1574780643548" duration="619000" />
+      <workItem from="1574780643548" duration="2247000" />
     </task>
     <task id="LOCAL-00001" summary="Added a NUMBER FORMAT ERROR if a digit has more than one '.'.&#10;Added a list for labels.&#10;Removed unnecessary code.&#10;Simplified the lists for numbers and operators.">
       <created>1574748931136</created>
@@ -123,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574748931136</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added a NUMBER FORMAT ERROR if a digit has more than one '.'.&#10;Added a list for labels.&#10;Removed unnecessary code.&#10;Simplified the lists for numbers and operators.">
+      <created>1574781285785</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574781285785</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

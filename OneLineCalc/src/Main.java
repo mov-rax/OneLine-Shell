@@ -62,6 +62,17 @@ public class Main {
             for (int i = 0; i < tempArr.length; i++){
                 runningString += tempArr[i]; //adds a character to the runningString (it is read from left to right).
 
+                if (list.letterListContains(tempArr[i])){ //used to ensure correct usage of labels (not yet implemented)
+                    lastIsLetter = true;
+                    lastIsNumber = false;
+                }
+
+                if (list.numListContains(tempArr[i])){ //used to ensure correct usage of labels (not yet implemented)
+                    lastIsLetter = false;
+                    lastIsNumber = true;
+                }
+
+
                 if (tempArr[i] == '(')
                     pCounter++; //adds one to pcounter
                 if (tempArr[i] == ')')
@@ -69,11 +80,20 @@ public class Main {
                 if (tempArr[i] == '.')
                     dCounter++;
 
+                if (list.opListContains(tempArr[i])){
+                    dCounter--; //removes a . once an operator is put
+                }
+
                 if (dCounter > 1){ //used to ensure that numbers are entered in correctly
                     System.out.println("NUMBER FORMAT ERROR.");
                     return false; //there are more than two .
                 }
 
+            }
+
+            if (pCounter != 0){ //used to ensure that the correct amount of parenthesis are utilized
+                System.out.println("PARENTHESIS ERROR.");
+                return false;
             }
 
             return true;
