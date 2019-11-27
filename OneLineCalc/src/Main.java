@@ -23,7 +23,8 @@ public class Main {
 
     private static void calcuate(String line){
         if (!line.equalsIgnoreCase("exit")){
-            System.out.println(solver.parenRecursion(line));
+            System.out.println(solver.multiP(line));
+            //System.out.println(solver.parenRecursion(line));
             looper();
         }
     }

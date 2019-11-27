@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7638518f-566d-4621-9cb0-65787a22650c" name="Default Changelist" comment="">
+    <list default="true" id="7638518f-566d-4621-9cb0-65787a22650c" name="Default Changelist" comment="WIP. PARTIALLY FUNCTIONAL WITH NESTED PARENTHESES.&#10;- Simplified Main()&#10;- Moved framer to ParenSolver()&#10;- ParenSolver() works if only given a problem with nested parentheses. (AT THE MOMENT)&#10;- Removed frame from Main()&#10;- removed redundant boolean isLoop from Main()&#10;- No longer converting String to a char[]&#10;- Using stringbuiilder in ParenSolver()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.jgrasp_canvas_xml" beforeDir="false" afterPath="$PROJECT_DIR$/Main.jgrasp_canvas_xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OneLineCalc/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OneLineCalc/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mainframe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mainframe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ParenSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ParenSolver.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,6 +39,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
         <option value="mov-rax &lt;58199799+mov-rax@users.noreply.github.com&gt;" />
@@ -113,7 +117,7 @@
       <workItem from="1574780643548" duration="2556000" />
       <workItem from="1574798761199" duration="13491000" />
       <workItem from="1574834411756" duration="4398000" />
-      <workItem from="1574867887342" duration="2844000" />
+      <workItem from="1574867887342" duration="8329000" />
     </task>
     <task id="LOCAL-00001" summary="Added a NUMBER FORMAT ERROR if a digit has more than one '.'.&#10;Added a list for labels.&#10;Removed unnecessary code.&#10;Simplified the lists for numbers and operators.">
       <created>1574748931136</created>
@@ -143,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574838756677</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="WIP. PARTIALLY FUNCTIONAL WITH NESTED PARENTHESES.&#10;- Simplified Main()&#10;- Moved framer to ParenSolver()&#10;- ParenSolver() works if only given a problem with nested parentheses. (AT THE MOMENT)&#10;- Removed frame from Main()&#10;- removed redundant boolean isLoop from Main()&#10;- No longer converting String to a char[]&#10;- Using stringbuiilder in ParenSolver()">
+      <created>1574871016874</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1574871016874</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +190,7 @@
     <MESSAGE value="Fixed a bug with the &quot;.&quot; counter in lineChecker()" />
     <MESSAGE value="NOT CURRENTLY FUCTIONAL WITH PARENTHESES&#10;PARENTHESIS SUPPORT WIP." />
     <MESSAGE value="NOT CURRENTLY FUCTIONAL WITH PARENTHESES&#10;PARENTHESIS SUPPORT WIP.&#10; - Added a parensolver class to recursively resolve entries with parentheses" />
-    <option name="LAST_COMMIT_MESSAGE" value="NOT CURRENTLY FUCTIONAL WITH PARENTHESES&#10;PARENTHESIS SUPPORT WIP.&#10; - Added a parensolver class to recursively resolve entries with parentheses" />
+    <MESSAGE value="WIP. PARTIALLY FUNCTIONAL WITH NESTED PARENTHESES.&#10;- Simplified Main()&#10;- Moved framer to ParenSolver()&#10;- ParenSolver() works if only given a problem with nested parentheses. (AT THE MOMENT)&#10;- Removed frame from Main()&#10;- removed redundant boolean isLoop from Main()&#10;- No longer converting String to a char[]&#10;- Using stringbuiilder in ParenSolver()" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP. PARTIALLY FUNCTIONAL WITH NESTED PARENTHESES.&#10;- Simplified Main()&#10;- Moved framer to ParenSolver()&#10;- ParenSolver() works if only given a problem with nested parentheses. (AT THE MOMENT)&#10;- Removed frame from Main()&#10;- removed redundant boolean isLoop from Main()&#10;- No longer converting String to a char[]&#10;- Using stringbuiilder in ParenSolver()" />
   </component>
 </project>

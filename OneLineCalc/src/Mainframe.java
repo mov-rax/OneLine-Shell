@@ -3,18 +3,13 @@ public class Mainframe {
     private Frame cursor;
     private boolean boolio; //makes PEMDAS a reality :)
     private boolean exists; //makes sure no operation is skipped
-    private boolean exists2; //makes sure no operation is skipped
-    private boolean nextIncrement; //increments next addFrame
-    private boolean nextDecrement; //decrement next addFrame
+
 
     Mainframe(){
         brain = new Frame();
         cursor = brain;
         boolio = true;
         exists = true;
-        exists2 = true;
-        nextIncrement = false;
-        nextDecrement = false;
     }
 
     void addFrame(Double value, OP operator){ //adds a brain to the mainframe.
@@ -102,8 +97,6 @@ public class Mainframe {
             case NULL:
                 cursor = brain; //brings it back to the beginning;
                 break;
-            default:
-                exists2 = false; //If the operator is not found, it will make exists2 false, making the recursive function go to the next element
         }
     }
 
