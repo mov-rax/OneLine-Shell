@@ -2,14 +2,10 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static boolean isLoop = true;
-    public static String temp = "";
-    private static Mainframe frame;
     private static ListValues list;
     private static ParenSolver solver;
 
     public static void main(String[] args){
-        frame = new Mainframe();
         list = new ListValues();
         solver = new ParenSolver();
         System.out.println("Welcome to OneLineCalc 1.0");
@@ -28,45 +24,10 @@ public class Main {
     private static void calcuate(String line){
         if (!line.equalsIgnoreCase("exit")){
             System.out.println(solver.parenRecursion(line));
-            //framer(line, frame); //turns the line into a mainframe
-            //System.out.println(frame.calculate()); //prints the result into a new line
-            //frame = new Mainframe();
             looper();
         }
     }
 
-    private static void framer(String line, Mainframe frame){
-        String runningNumber = ""; //used for concatenating values
-        char[] tempArr = line.toCharArray();
-
-        for (int i = 0; i < tempArr.length; i++){
-            if (list.numListContains(tempArr[i])){ //if it is a number or a .
-                runningNumber += tempArr[i]; //appends character to end of runningNumber
-            } else if (list.opListContains(tempArr[i])){ //if an operator is found as the character, the value behind it will be put into a frame
-
-                //if (list.convertToOP(tempArr[i]) == OP.PARENTHESIS_OPEN || list.convertToOP(tempArr[i]) == OP.PARENTHESIS_CLOSED){ //If the character is ( or )
-                //frame.addFrame(null, list.convertToOP(tempArr[i])); //value is NULL, as a new frame will not be added. The priority of the next frame will be altered.
-                //}
-
-                frame.addFrame(Double.parseDouble(runningNumber), list.convertToOP(tempArr[i])); //adds a frame to the mainframe
-                runningNumber = ""; //clears the runningNumber
-            }
-            }
-            if (!runningNumber.equals("")) //this is done for the last number at the end of the line :). Ensures that it is added to the frame
-                frame.addFrame(Double.parseDouble(runningNumber), OP.NULL);
-        }
-
-        public static void safeAddFrame(String runningNumber, OP operator ) throws NumberFormatException{
-        frame.addFrame(Double.parseDouble(runningNumber), operator);
-
-        }
-
-        private static String charCutter(char[] arr, int low, int high){ //low and high are indicies (not including indicies with parentheses)
-            String newString = "";
-            for (int i = low; i < high; i++)
-                newString += arr[i];
-            return newString;
-        }
 
         private static boolean lineChecker(String line) { //ensures that everything is syntatically correct before it is fed to the framer.
             boolean lastIsLetter = false;
