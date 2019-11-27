@@ -1,17 +1,17 @@
-public class BigBrain {
-    private BigBrain prevBrain;
-    private BigBrain nextBrain;
+public class Frame {
+    private Frame prevBrain;
+    private Frame nextBrain;
     private Double brain;
     private OP operator;
 
-    BigBrain(){ //creates an empty brain
+    Frame(){ //creates an empty brain
         this.prevBrain = null;
         this.nextBrain = null;
         this.brain = null;
         this.operator = null;
     }
 
-    BigBrain(Double brain){ //not sure why this would be used.
+    Frame(Double brain){ //not sure why this would be used.
         this.brain = brain;
         prevBrain = null;
         nextBrain = null;
@@ -19,14 +19,14 @@ public class BigBrain {
 
     }
 
-    BigBrain(Double brain, OP operator){
+    Frame(Double brain, OP operator){
         this.brain = brain;
         this.operator = operator;
         prevBrain = null;
         nextBrain = null;
     }
 
-    BigBrain(Double brain, BigBrain prevBrain){
+    Frame(Double brain, Frame prevBrain){
         operator = OP.NULL;
         this.brain = brain;
         this.prevBrain = prevBrain;
@@ -34,21 +34,22 @@ public class BigBrain {
         prevBrain.nextBrain = this;
     }
 
-    BigBrain(Double brain, OP operator, BigBrain prevBrain){
+    Frame(Double brain, OP operator, Frame prevBrain){
         this.brain = brain;
         this.operator = operator;
         this.prevBrain = prevBrain;
-        nextBrain = null;
+        this.nextBrain = null;
+
     }
 
-    BigBrain(Double brain, OP operator, BigBrain prevBrain, BigBrain nextBrain){
+    Frame(Double brain, OP operator, Frame prevBrain, Frame nextBrain){
         this.brain = brain;
         this.operator = operator;
         this.prevBrain = prevBrain;
         this.nextBrain = nextBrain;
     }
 
-    void setNext(BigBrain brain){
+    void setNext(Frame brain){
         if (nextBrain != null){
             nextBrain.prevBrain = null; //severs the link from the nextbrain
             nextBrain.prevBrain = this;
@@ -57,7 +58,7 @@ public class BigBrain {
 
     }
 
-    void setPrev(BigBrain brain){
+    void setPrev(Frame brain){
         if (prevBrain != null)
             prevBrain.nextBrain = null; //severs the link
         prevBrain = brain;
@@ -72,6 +73,8 @@ public class BigBrain {
         this.operator = operator;
     }
 
+
+
     Double getB(){
         return brain;
     }
@@ -80,11 +83,12 @@ public class BigBrain {
         return operator;
     }
 
-    BigBrain getNext(){
+    Frame getNext(){
         return nextBrain;
     }
 
-    BigBrain getPrev(){
+
+    Frame getPrev(){
         return prevBrain;
     }
 

@@ -13,32 +13,25 @@
     <DeclaringType>Main</DeclaringType>
     <Depth>0</Depth>
   </Scope>
-  <Scope id="1">
+  <Scope id="2">
     <Name>addFrame</Name>
     <Signature>(Ljava/lang/Double;LOP;)V</Signature>
     <DeclaringType>Mainframe</DeclaringType>
     <Depth>3</Depth>
   </Scope>
-  <Frame>
-    <Bounds>
-      <AutoSize>true</AutoSize>
-      <X>100</X>
-      <Y>250</Y>
-      <W>134</W>
-      <H>53</H>
-    </Bounds>
-    <Viewer>
-      <ScopeID>0</ScopeID>
-      <Expression>`local` frame</Expression>
-    </Viewer>
-  </Frame>
+  <Scope id="1">
+    <Name>addFrame</Name>
+    <Signature>(Ljava/lang/Double;LOP;)V</Signature>
+    <DeclaringType>Mainframe</DeclaringType>
+    <Depth>0</Depth>
+  </Scope>
   <Frame>
     <Bounds>
       <AutoSize>true</AutoSize>
       <X>270</X>
       <Y>90</Y>
-      <W>98</W>
-      <H>45</H>
+      <W>110</W>
+      <H>47</H>
     </Bounds>
     <LabelLoc>
       <WO>false</WO>
@@ -54,8 +47,8 @@
       <AutoSize>true</AutoSize>
       <X>50</X>
       <Y>90</Y>
-      <W>98</W>
-      <H>43</H>
+      <W>110</W>
+      <H>45</H>
     </Bounds>
     <Viewer>
       <ScopeID>0</ScopeID>
@@ -66,18 +59,28 @@
   <Frame>
     <Bounds>
       <AutoSize>true</AutoSize>
-      <X>430</X>
-      <Y>80</Y>
-      <W>350</W>
-      <H>79</H>
+      <X>100</X>
+      <Y>250</Y>
+      <W>146</W>
+      <H>55</H>
     </Bounds>
     <Viewer>
       <ScopeID>0</ScopeID>
-      <Expression>`local char[]` tempArr</Expression>
-      <ViewerClass>jgrasp_viewers._X_A_PresentationView</ViewerClass>
-      <ViewerData>
-        <Round>false</Round>
-      </ViewerData>
+      <Expression>`local` frame</Expression>
+    </Viewer>
+  </Frame>
+  <Frame>
+    <Bounds>
+      <AutoSize>true</AutoSize>
+      <X>380</X>
+      <Y>370</Y>
+      <W>609</W>
+      <H>266</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>1</ScopeID>
+      <Expression>this</Expression>
+      <ViewerClass>jgrasp_viewers._X_BasicView</ViewerClass>
     </Viewer>
   </Frame>
   <Frame>
@@ -85,11 +88,11 @@
       <AutoSize>true</AutoSize>
       <X>420</X>
       <Y>210</Y>
-      <W>238</W>
-      <H>137</H>
+      <W>218</W>
+      <H>122</H>
     </Bounds>
     <Viewer>
-      <ScopeID>1</ScopeID>
+      <ScopeID>2</ScopeID>
       <Expression>this</Expression>
       <ViewerClass>jgrasp_viewers.java__lang__Object_LinkedView</ViewerClass>
       <ViewerData>
@@ -99,12 +102,31 @@
       </ViewerData>
     </Viewer>
   </Frame>
+  <Frame>
+    <Bounds>
+      <AutoSize>true</AutoSize>
+      <X>430</X>
+      <Y>80</Y>
+      <W>352</W>
+      <H>81</H>
+    </Bounds>
+    <Viewer>
+      <ScopeID>0</ScopeID>
+      <Expression>`local char[]` tempArr</Expression>
+      <ViewerClass>jgrasp_viewers._X_A_PresentationView</ViewerClass>
+      <ViewerData>
+                
+        <Round>false</Round>
+              
+      </ViewerData>
+    </Viewer>
+  </Frame>
   <Size>
-    <W>720</W>
-    <H>450</H>
+    <W>1241</W>
+    <H>800</H>
   </Size>
   <ESize>
-    <W>720</W>
-    <H>450</H>
+    <W>1241</W>
+    <H>800</H>
   </ESize>
 </Canvas>

@@ -4,5 +4,7 @@ public enum OP {
     ADD,
     SUBTRACT,
     MODULO,
+    PARENTHESIS_OPEN,
+    PARENTHESIS_CLOSED,
     NULL
 }

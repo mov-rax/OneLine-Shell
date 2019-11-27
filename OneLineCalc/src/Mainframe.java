@@ -1,14 +1,20 @@
 public class Mainframe {
-    private BigBrain brain;
-    private BigBrain cursor;
+    private Frame brain;
+    private Frame cursor;
     private boolean boolio; //makes PEMDAS a reality :)
     private boolean exists; //makes sure no operation is skipped
+    private boolean exists2; //makes sure no operation is skipped
+    private boolean nextIncrement; //increments next addFrame
+    private boolean nextDecrement; //decrement next addFrame
 
     Mainframe(){
-        brain = new BigBrain();
+        brain = new Frame();
         cursor = brain;
         boolio = true;
         exists = true;
+        exists2 = true;
+        nextIncrement = false;
+        nextDecrement = false;
     }
 
     void addFrame(Double value, OP operator){ //adds a brain to the mainframe.
@@ -17,16 +23,22 @@ public class Mainframe {
             cursor = cursor.getNext();
         }
 
-        if (cursor.getB() == null){
-            cursor.setB(value);
-            cursor.setOP(operator);
+        if (cursor.getB() == null) { //if it has no value
+            cursor.setB(value); //sets value
+            cursor.setOP(operator); //sets operator
+
         } else {
-            cursor.setNext(new BigBrain(value, operator, cursor)); //sets next brain to a new brain, with value, operator, and sets prevBrain to the cursor;
+            cursor.setNext(new Frame(value, operator, cursor)); //sets next brain to a new brain, with value, operator, and sets prevBrain to the cursor;
         }
+
+
+
     }
 
-    Double recurseCalc(){
-        if (brain.getNext() != null){
+    private Double recurseCalc(){ //highest priority and last priority
+                if (brain.getNext() != null){//start
+
+
             if (boolio){ //does magic for MD&M operators
                 mdmn_switch(); //checks if the element has a MULTIPLY, DIVIDE, or MODULO operator.
                 if (exists)
@@ -39,7 +51,9 @@ public class Mainframe {
                 as_switch(); //all that is needed. The cursor does not need to move from the brain. loop will end once the brain is the only element left.
                 recurseCalc(); //calls recurseCalc
             }
-        }
+
+
+        }//end
         return brain.getB();
     }
 
@@ -49,6 +63,7 @@ public class Mainframe {
     }
 
     private void mdmn_switch(){
+
         switch(cursor.getOP()) { //----SEPERATES MULTIPLY. DIVIDE, AND MODULO OPERATORS FROM THE ADD AND SUBTRACT OPERATORS TO KEEP ORDER OF OPERATIONS.
             case MULTIPLY:
                 cursor.setB(cursor.getB() * cursor.getNext().getB()); //does the operation
@@ -74,6 +89,7 @@ public class Mainframe {
     }
 
     private void as_switch(){
+
         switch (cursor.getOP()) { //ADD AND SUBTRACT ONLY DONE AFTER MULTIPLY, DIVIDE, AND MODULO
             case ADD:
                 cursor.setB(cursor.getB() + cursor.getNext().getB());
@@ -85,11 +101,18 @@ public class Mainframe {
                 break;
             case NULL:
                 cursor = brain; //brings it back to the beginning;
+                break;
+            default:
+                exists2 = false; //If the operator is not found, it will make exists2 false, making the recursive function go to the next element
         }
     }
 
+    public void mergeFrame(Mainframe mainframe){ //merges the next value of the cursor of both frames. !!ONLY SHOULD BE USED AFTER BOTH HAVE BEEN CALCULATED WITH calculate()!!
+        cursor.setNext(mainframe.cursor.getNext());
+    }
 
-    void completeCalculate(){ //after an operation is executed, it removes the next operator from the brain, making it smaller until there is only one element left (the answer).
+
+    private void completeCalculate(){ //after an operation is executed, it removes the next operator from the brain, making it smaller until there is only one element left (the answer).
         cursor.setOP(cursor.getNext().getOP()); //transfers over the next operator to the one doing the operation
         cursor.setNext(cursor.getNext().getNext()); //removes the next brain from the mainframe, sets this brain equal to the next one over (which may or may not be null)
     }

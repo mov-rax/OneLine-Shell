@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7638518f-566d-4621-9cb0-65787a22650c" name="Default Changelist" comment="">
+    <list default="true" id="7638518f-566d-4621-9cb0-65787a22650c" name="Default Changelist" comment="NOT CURRENTLY FUCTIONAL WITH PARENTHESES&#10;PARENTHESIS SUPPORT WIP.">
+      <change afterPath="$PROJECT_DIR$/src/ParenSolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.jgrasp_canvas_xml" beforeDir="false" afterPath="$PROJECT_DIR$/Main.jgrasp_canvas_xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OneLineCalc/BigBrain.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OneLineCalc/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OneLineCalc/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OneLineCalc/Mainframe$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OneLineCalc/Mainframe$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OneLineCalc/Mainframe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OneLineCalc/Mainframe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OneLineCalc/OP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OneLineCalc/OP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BigBrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mainframe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mainframe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OP.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +49,11 @@
       <list>
         <option value="mov-rax &lt;58199799+mov-rax@users.noreply.github.com&gt;" />
       </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -105,7 +119,9 @@
       <workItem from="1574536713712" duration="21354000" />
       <workItem from="1574740009321" duration="286000" />
       <workItem from="1574740323399" duration="4789000" />
-      <workItem from="1574780643548" duration="2247000" />
+      <workItem from="1574780643548" duration="2556000" />
+      <workItem from="1574798761199" duration="13491000" />
+      <workItem from="1574834411756" duration="4294000" />
     </task>
     <task id="LOCAL-00001" summary="Added a NUMBER FORMAT ERROR if a digit has more than one '.'.&#10;Added a list for labels.&#10;Removed unnecessary code.&#10;Simplified the lists for numbers and operators.">
       <created>1574748931136</created>
@@ -121,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574781285785</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixed a bug with the &quot;.&quot; counter in lineChecker()">
+      <created>1574783152343</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1574783152343</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +175,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="Added a NUMBER FORMAT ERROR if a digit has more than one '.'.&#10;Added a list for labels.&#10;Removed unnecessary code.&#10;Simplified the lists for numbers and operators." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a NUMBER FORMAT ERROR if a digit has more than one '.'.&#10;Added a list for labels.&#10;Removed unnecessary code.&#10;Simplified the lists for numbers and operators." />
+    <MESSAGE value="Fixed a bug with the &quot;.&quot; counter in lineChecker()" />
+    <MESSAGE value="NOT CURRENTLY FUCTIONAL WITH PARENTHESES&#10;PARENTHESIS SUPPORT WIP." />
+    <option name="LAST_COMMIT_MESSAGE" value="NOT CURRENTLY FUCTIONAL WITH PARENTHESES&#10;PARENTHESIS SUPPORT WIP." />
   </component>
 </project>
