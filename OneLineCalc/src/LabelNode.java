@@ -1,5 +1,3 @@
-package rax.Lables;
-
 public class LabelNode { //gives the user the ability to assign values to labels
     private String label;
     private String value;
