@@ -2,8 +2,6 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static boolean isLoop = true;
-    public static String temp = "";
     private static Mainframe frame;
     private static ListValues list;
     private static AssignmentController aController;
